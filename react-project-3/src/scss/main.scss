@@ -1,0 +1,17 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+
+.alpha {
+     background-color: $gray-600; 
+     height: 100vh;
+}
+.beta {
+    color: $yellow-300;
+    background-color: $indigo-900;
+  }
+  
