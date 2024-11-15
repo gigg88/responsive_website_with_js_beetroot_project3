@@ -16,8 +16,7 @@ fetch(apiUrl)
     for (const [currencyCode, currencyData] of Object.entries(data.data)) {
       console.log(`Currency Code: ${currencyCode}`);
       console.log(`Currency Name: ${currencyData.name}`);
-      console.log(`Symbol: ${currencyData.symbol}`);
-      
+            
     }
   })
   .catch(error => {
