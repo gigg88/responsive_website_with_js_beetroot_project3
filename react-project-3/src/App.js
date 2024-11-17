@@ -10,17 +10,15 @@ const apiUrl = `https://api.freecurrencyapi.com/v1/latest?apikey=${APIKEY}`;
 
 
 function App() {
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    for (const [currencyCode, currencyData] of Object.entries(data.data)) {
-      console.log(`Currency Code: ${currencyCode}`);
-      console.log(`Currency Name: ${currencyData.name}`);
-            
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+  return (
+    <div className="App">
+      
+      <CurrencyInfo/>
+      
+      
+      
+    </div>
+  );
 }
+
 export default App;
