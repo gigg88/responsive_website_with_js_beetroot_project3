@@ -69,3 +69,21 @@ function App() {
   );
 }
   
+
+{
+  Object.keys(exRate).map(currencyName => {
+      return (
+          <p key={exRate[currencyName]}>{currencyName}:{exRate[currencyName]}</p>
+      )
+  })
+}
+
+
+<>
+<p>Selected Currency: {selectedCurrency}</p>
+<p>Exchange Rate: {selectedRate}</p>
+<CurrencyCard currency={selectedCurrency} rate={selectedRate} />
+</>
+
+const selectedCurrency = Object.keys(exRate)[0]; // Assuming first currency by default
+  const selectedRate = exRate[selectedCurrency].toFixed(2);
