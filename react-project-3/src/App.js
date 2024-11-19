@@ -1,21 +1,26 @@
-
+import Home from './pages/Home'
+import React from 'react';
 import './App.css';
 import './scss/main.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CurrencyInfo from './pages/CurrencyInfo';
 import CurrencyOption from './pages/CurrencyOption';
+import Default from './layouts/Default';
+import { Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
   return (
     <div className="App">
-      <>
-      <CurrencyOption/>
-      <CurrencyInfo/>
-       
-      </>
-      
-      
+
+      <Routes>
+        <Route path='/' element={ <Default/>}>
+        <Route index element ={<Home/>} />
+        <Route path='CurrencyInfo' element={<CurrencyInfo/>}/>
+        </Route>
+      </Routes>
+
     </div>
   );
 }
