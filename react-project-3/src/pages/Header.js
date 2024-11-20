@@ -1,30 +1,19 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header () {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Features</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Pricing</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+
+
+ <nav className="d-inline-flex mt-2 mt-md-0 mx-md-auto">
+  <Link to={'/'} className="me-3 py-2 link-body-emphasis text-decoration-none">Home</Link>
+  <Link to={'CurrencyInfo'} className="me-3 py-2 link-body-emphasis text-decoration-none">Currencies</Link>
+  <Link to={'Converter'} className="me-3 py-2 link-body-emphasis text-decoration-none">Converter</Link>
 </nav>
     )
 
 }
+
+
+
+

@@ -33,26 +33,24 @@ export default function CurrencyInfo() {
 
   return (
     <>
-      <select onChange={(event) => changeHandler(event.target.value)}>
+      <select className="form-select" onChange={handleCurrencyChange}>
         {Object.keys(exRate).map((currencyName) => (
-          <CurrencyOption 
-            key={currencyName} 
-            currencyName={currencyName} />
+          <CurrencyOption
+            key={currencyName}
+            currencyName={currencyName}
+            isSelected={currencyName === selectedCurrency} // Add isSelected prop
+          />
         ))}
       </select>
 
-      {Object.keys(exRate).map((currencyName) => {
-        return (
-          <div className="card-group">
-            <CurrencyCard
-            key={currencyName}
-            currencyName={currencyName}
-            exRate={exRate}
-            />
-           </div>
-          
-        );
-      })}
+      <p>
+        {selectedCurrency}: {exRate[selectedCurrency]}
+      </p>
     </>
   );
-}
+}      
+                    
+          
+
+
+

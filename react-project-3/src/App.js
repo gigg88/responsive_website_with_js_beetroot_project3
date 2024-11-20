@@ -7,6 +7,7 @@ import CurrencyInfo from './pages/CurrencyInfo';
 import CurrencyOption from './pages/CurrencyOption';
 import Default from './layouts/Default';
 import { Route, Routes } from 'react-router-dom';
+import Converter from './pages/Converter';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={ <Default/>}>
         <Route index element ={<Home/>} />
         <Route path='CurrencyInfo' element={<CurrencyInfo/>}/>
+        <Route path='Converter' element={<Converter/>}/>
         </Route>
       </Routes>
 
