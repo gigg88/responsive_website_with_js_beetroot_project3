@@ -87,3 +87,32 @@ function App() {
 
 const selectedCurrency = Object.keys(exRate)[0]; // Assuming first currency by default
   const selectedRate = exRate[selectedCurrency].toFixed(2);
+
+
+
+  const changeHandler = (val) => {
+    getExchangeRates(val);
+  };
+
+  useEffect(() => {
+    getExchangeRates();
+  }, []);
+
+  return (
+    <>
+      <select className="form-select" onChange={handleCurrencyChange}>
+        {Object.keys(exRate).map((currencyName) => (
+          <CurrencyOption
+            key={currencyName}
+            currencyName={currencyName}
+            isSelected={currencyName === selectedCurrency} // Add isSelected prop
+          />
+        ))}
+      </select>
+
+      <p>
+        {selectedCurrency}: {exRate[selectedCurrency]}
+      </p>
+    </>
+  );
+}    
