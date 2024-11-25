@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import CurrencyCard from "./CurrencyCard";
 import CurrencyOption from "./CurrencyOption";
 import '../scss/CurrencyCard.scss';

@@ -1,5 +1,5 @@
 const APIKEY = 'fca_live_C2su03vbd3I3vDXWwhHFqGQT92BskHNUYnoabFY0';
-const apiUrl = `https://api.freecurrencyapi.com/v1/latest?base=USD&apikey=${APIKEY}`
+const apiUrl = `https://api.freecurrencyapi.com/v1/latest?base=USD&apikey=${APIKEY}`;
 
 fetch(apiUrl)
   .then(response => response.json())

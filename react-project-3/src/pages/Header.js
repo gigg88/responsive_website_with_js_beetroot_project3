@@ -10,7 +10,7 @@ export default function Header () {
   <Link to={'CurrencyInfo'} className="me-3 py-2 link-body-emphasis text-decoration-none">Currencies</Link>
   <Link to={'Converter'} className="me-3 py-2 link-body-emphasis text-decoration-none">Converter</Link>
 </nav>
-    )
+    );
 
 }
 
