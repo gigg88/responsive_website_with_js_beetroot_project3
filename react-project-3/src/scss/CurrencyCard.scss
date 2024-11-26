@@ -26,10 +26,19 @@
 .card-text {
   font-size: 1em;
   color: #6c757d;
+  min-height: 50px;
 }
 
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
   width: 100%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-self: flex-start;
+  gap: 15px;
 }

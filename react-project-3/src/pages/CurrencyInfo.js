@@ -41,6 +41,7 @@ export default function CurrencyInfo() {
         ))}
       </select>
 
+    <div className='grid'>
       {Object.keys(exRate).map((currencyName) => {
         return (
           <div className="card-group">
@@ -53,6 +54,7 @@ export default function CurrencyInfo() {
           
         );
       })}
+      </div>
     </>
   );
 }

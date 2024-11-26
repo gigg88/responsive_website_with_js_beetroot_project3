@@ -7,12 +7,16 @@ const apiUrl = `https://api.freecurrencyapi.com/v1/latest?apikey=${APIKEY}`;
 function useCurrencyInfo(currency){
     const [data, setData] = useState({});
     useEffect(() => {
-      fetch(`apiUrl`)
+      fetch(apiUrl)
       .then((res) => res.json())
-      .then((res) => setData(res[currency]))
+      .then((res) => {
+        console.log(res.data);
+        
+        setData(res.data[currency])
+      })
     }, [currency])
 
-    console.log(data);
+    //console.log(data);
     return data
     
 }
