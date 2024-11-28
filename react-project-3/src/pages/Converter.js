@@ -17,7 +17,8 @@ export default function Converter() {
   const [options, setOptions] = useState([]);
 
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to.toUpperCase()])
+    const convertedAmount = amount * currencyInfo[to.toUpperCase()];
+    setConvertedAmount(convertedAmount.toFixed(2));
   }
 
   const getPageloadData = (currency = from) => {
@@ -42,7 +43,7 @@ export default function Converter() {
         }}>
           <div className="mb-3">
             <InputBox
-              label="from"
+              label="FROM"
               amount={amount}
               currencyOptions={options}
               onCurrencyChange={(currency) => {
@@ -55,15 +56,10 @@ export default function Converter() {
               selectedCurrency={from}
             />
           </div>
-          <div className="position-relative w-100 mb-3">
-            <button
-              className="btn btn-primary position-absolute top-50 left-50 translate-middle border-0 rounded-pill">
-              Swap
-            </button>
-          </div>
-          <div className="mb-3">
+          
+          <div className="mb-3 mt-5">
             <InputBox
-              label="to"
+              label="TO"
               currencyOptions={options}
               amount={convertedAmount}
               onCurrencyChange={(currency) => setTo(currency)}
@@ -73,7 +69,7 @@ export default function Converter() {
           </div>
           <button
             type="submit"
-            className="btn btn-primary w-100 rounded-lg"
+            className="btn btn-dark w-100 rounded-lg"
           >
             Convert {from.toUpperCase()} to {to.toUpperCase()}
           </button>

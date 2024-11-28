@@ -5,13 +5,22 @@
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 
 .alpha {
-     background-color: $gray-600; 
+     text-align: left;
      height: 100vh;
 }
 .beta {
     color: $yellow-300;
     background-color: $indigo-900;
+  }
+
+  
+  .home_list {
+     margin-top:20px;
+     
   }
   

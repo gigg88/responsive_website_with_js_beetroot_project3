@@ -16,7 +16,7 @@ function InputBox({
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       <div className="w-50">
-        <label htmlFor={id} className="form-label text-black mb-2">
+        <label htmlFor={id} className="form-label text-black mb-2 font-weight-bolder">
           {label}
         </label>
         <input
@@ -29,7 +29,7 @@ function InputBox({
           onChange={(e) => onAmountChange(Number(e.target.value))}
         />
       </div>
-      <div className="w-50 d-flex justify-content-end">
+      <div className="w-50 mt-5 d-flex justify-content-end">
         <p className="text-black mb-2 w-100">Currency Type</p>
         <select
           className="form-select rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
