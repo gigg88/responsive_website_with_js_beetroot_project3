@@ -41,7 +41,7 @@ export default function Converter() {
           e.preventDefault();
           convert();
         }}>
-          <div className="mb-3">
+          <div className="mb-3 d-flex flex-wrap justify-content-center align-items-center w-100">
             <InputBox
               label="FROM"
               amount={amount}
@@ -57,7 +57,7 @@ export default function Converter() {
             />
           </div>
           
-          <div className="mb-3 mt-5">
+          <div className="mb-3 d-flex flex-wrap justify-content-center align-items-center  ">
             <InputBox
               label="TO"
               currencyOptions={options}
