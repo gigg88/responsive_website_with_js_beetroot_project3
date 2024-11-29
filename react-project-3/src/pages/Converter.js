@@ -10,7 +10,7 @@ const apiUrl = `https://api.freecurrencyapi.com/v1/latest?apikey=${APIKEY}`;
 
 export default function Converter() {
   const [amount, setAmount] = useState(0)
-  const [from, setFrom] = useState('USD')
+  const [from, setFrom] = useState('NOK')
   const [to, setTo] = useState('EUR')
   const [convertedAmount, setConvertedAmount] = useState(0);
   const [currencyInfo, setCurrencyInfo] = useState({});
